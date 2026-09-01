@@ -3,6 +3,7 @@
 
 using namespace std;
 
+// Sum of Digits 
 int main() {
     int n;
     int sum = 0;

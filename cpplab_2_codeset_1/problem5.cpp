@@ -2,6 +2,7 @@
 #include <vector>
 #include <string>
 
+// Linear Search 
 int main() {
     std::vector<std::string> names = {"exraveganza", "elsexo", "johnny", "raze", "gattaouz"};
     std::string input;
@@ -9,7 +10,7 @@ int main() {
     std::cin >> input;
     for (int i = 0; i < names.size(); i++){
         if (names[i] == input){
-            std::cout << "Name: " << names[i] << ", Index: " << i;
+            std::cout << "Name: " << names[i] << ", Index: " << i << std::endl;
         }
     }
     return 0;

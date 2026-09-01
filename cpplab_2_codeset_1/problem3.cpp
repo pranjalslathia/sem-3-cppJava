@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 
+// Find Maximum Element in an Array 
 int main() {
     std::vector<int> numbers;
     int n, input, max;
@@ -12,8 +13,8 @@ int main() {
         numbers.push_back(input);
         n--;
     }
-    for (int i = 0; i < numbers.size(); i++){
-        max = numbers[i];
+    max = numbers[0];
+    for (int i = 0; i < numbers.size(); i++){ 
         if (max < numbers[i]){
             max = numbers[i];
         }

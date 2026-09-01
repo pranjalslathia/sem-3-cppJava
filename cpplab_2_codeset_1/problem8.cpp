@@ -2,6 +2,7 @@
 #include <vector>
 #include <string>
 
+// Array Reversal
 int main() {
     std::string name, buffer;
     std::vector<std::string> names = {"daku", "professor", "billusanda", "hergoodboyy"};
@@ -16,9 +17,14 @@ int main() {
     }
     std::cout << "{";
     for (int i = 0; i < names.size(); i++){
-        std::cout << names[i] << ", ";
+        if (i == names.size()-1)
+        {
+            std::cout << names[i];
+            break;
+        }
+        std::cout << names[i] << ", "; 
     }
-    std::cout << "}";
+    std::cout << "}" << std::endl;
     
     return 0;
 }

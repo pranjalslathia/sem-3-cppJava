@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 
+// Find Minimum Element in an Array 
 int main() {
     std::vector<int> numbers;
     int n, input, min;
