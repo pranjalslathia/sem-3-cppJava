@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 
+// Count Occurrences of an Element 
 int main() {
     std::vector<int> numbers = {1,1,2,2,44,9,10};
     int frequency = 0, element;
