@@ -1,33 +1,35 @@
 #include <iostream>
-#include <string>
-#include <vector>
 
-class classA {
+class ClassB;
+
+class ClassA {
 private:
     int x;
 public:
-    friend class ClassB;
+    ClassA(int value){
+        x = value;
+    }
+    friend int sum(ClassA obj1, ClassB obj2);
 };
 
 class ClassB {
 private:
     int y;
 public:
-    friend class ClassA;
-    static void larger(Number &n){
-        if (n.x > n.y && n.x != n.y)
-        {
-            std::cout << "Largest: " << n.x << std::endl;
-        }
-        else{
-            std::cout << "Largest: " << n.y << std::endl;
-        }
-        
+    ClassB(int value){
+        y = value;
     }
+    friend int sum(ClassA obj1, ClassB obj2);
 };
 
+int sum(ClassA obj1, ClassB obj2){
+        return obj1.x + obj2.y;
+    }
+
 int main(){
-    Number n1;
-    Compare::larger(n1);
+    ClassA n1(10);
+    ClassB n2(20);
+    std::cout << "Sum: " << sum(n1, n2) << std::endl;
+
     return 0;
 }
